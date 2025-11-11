@@ -23,7 +23,7 @@ const Register = () => {
     setErrors(errrs);
     if (errrs.name === "" && errrs.password === "" && errrs.email === "") {
       axios
-        .post("http://127.0.0.1:3000/contactmsyt/register", values)
+        .post("https://contact-manager-server-three.vercel.app/contactmsyt/register", values)
         .then((res) => {
           if (res.data.success) {
             toast.success("Registered Successfully", {

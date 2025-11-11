@@ -27,7 +27,7 @@ const EditContact = () => {
     e.preventDefault();
 
     axios
-      .put("http://127.0.0.1:3000/contactmsyt/update-contact/" + id, values, {
+      .put("https://contact-manager-server-three.vercel.app/contactmsyt/update-contact/" + id, values, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -50,7 +50,7 @@ const EditContact = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:3000/contactmsyt/contact/" + id, {
+      .get("https://contact-manager-server-three.vercel.app/contactmsyt/contact/" + id, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

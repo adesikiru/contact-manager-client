@@ -24,7 +24,7 @@ const Login = () => {
     setErrors(errrs);
     if (errrs.password === "" && errrs.email === "") {
       axios
-        .post("http://127.0.0.1:3000/contactmsyt/login", values)
+        .post("https://contact-manager-server-three.vercel.app/contactmsyt/login", values)
         .then((res) => {
           if (res.data.success) {
             toast.success("Login Successfully", {

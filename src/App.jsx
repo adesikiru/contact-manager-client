@@ -70,7 +70,7 @@ const App = () => {
   const [user, setUser] = useState();
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:3000/contactmsyt/verify", {
+      .get("https://contact-manager-server-three.vercel.app/contactmsyt/verify", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
