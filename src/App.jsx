@@ -70,7 +70,7 @@ const App = () => {
   const [user, setUser] = useState();
   useEffect(() => {
     axios
-      .get("https://contact-manager-server-three.vercel.app/contactmsyt/verify", {
+      .get("https://contact-manager-server-three.vercel.app/api/contactmsyt/verify", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

@@ -25,7 +25,7 @@ const AddContact = () => {
     e.preventDefault();
 
     axios
-      .post("https://contact-manager-server-three.vercel.app/contactmsyt/add-contact", values, {
+      .post("https://contact-manager-server-three.vercel.app/api/contactmsyt/add-contact", values, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
