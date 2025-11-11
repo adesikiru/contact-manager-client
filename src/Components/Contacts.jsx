@@ -37,7 +37,7 @@ const Contacts = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`https://contact-manager-server-three.vercel.app/contactmsyt/contact/${id}`, {
+          .delete(`https://contact-manager-server-sepia.vercel.app/contactmsyt/contact/${id}`, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
@@ -98,7 +98,7 @@ const Contacts = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://contact-manager-server-three.vercel.app/contactmsyt/contacts", {
+      .get("https://contact-manager-server-sepia.vercel.app/contactmsyt/contacts", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
