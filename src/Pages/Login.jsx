@@ -25,7 +25,7 @@ const Login = () => {
     if (errrs.password === "" && errrs.email === "") {
       axios
         .post(
-          "https://contact-manager-server-three.vercel.app/api/contactmsyt/login",
+          "https://contact-manager-server-three.vercel.app/contactmsyt/login",
           values,
           { withCredentials: true },
         )

@@ -23,7 +23,7 @@ const Register = () => {
     setErrors(errrs);
     if (errrs.name === "" && errrs.password === "" && errrs.email === "") {
       axios
-        .post("https://contact-manager-server-three.vercel.app/api/contactmsyt/register", values)
+        .post("https://contact-manager-server-three.vercel.app/contactmsyt/register", values)
         .then((res) => {
           if (res.data.success) {
             toast.success("Registered Successfully", {
