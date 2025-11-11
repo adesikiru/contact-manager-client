@@ -73,8 +73,7 @@ const App = () => {
       .get("https://contact-manager-server-sepia.vercel.app/contactmsyt/verify", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-        withCredentials: true
+        }
       })
       .then((res) => {
         if (res.data.success) {

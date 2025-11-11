@@ -21,6 +21,8 @@ const Logout = () => {
       localStorage.clear();
       setUser(null);
       navigate("/");
+    }else{
+      navigate('/dashboard');
     }
   });
 };
