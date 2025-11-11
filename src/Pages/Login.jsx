@@ -4,7 +4,7 @@ import "../assets/CSS/form.css";
 import Validation from "../Components/Validation";
 import axios from "axios";
 import { toast } from "react-toastify";
-import {UserContext}  from "../App";
+import { UserContext } from "../App";
 
 const Login = () => {
   const [values, setValues] = useState({
@@ -24,7 +24,11 @@ const Login = () => {
     setErrors(errrs);
     if (errrs.password === "" && errrs.email === "") {
       axios
-        .post("https://contact-manager-server-three.vercel.app/contactmsyt/login", values)
+        .post(
+          "https://contact-manager-server-three.vercel.app/contactmsyt/login",
+          values,
+          { withCredentials: true },
+        )
         .then((res) => {
           if (res.data.success) {
             toast.success("Login Successfully", {
