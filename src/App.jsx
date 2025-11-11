@@ -74,6 +74,7 @@ const App = () => {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
+        withCredentials: true
       })
       .then((res) => {
         if (res.data.success) {
